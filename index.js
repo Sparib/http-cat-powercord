@@ -5,7 +5,7 @@ const Settings = require('./Settings.jsx');
 
 module.exports = class HttpCat extends Plugin {
     async startPlugin() {
-        powercord.api.registerSettings('http-cat', {
+        powercord.api.settings.registerSettings('http-cat', {
             category: this.entityID,
             label: 'Http Cat',
             render: Settings
