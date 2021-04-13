@@ -1,0 +1,7 @@
+{
+    "name": "Http Cat",
+    "description": "Sets up a http cat link",
+    "author": "Sparib",
+    "version": "0.1.0",
+    "license": "MIT"
+}
