@@ -47,4 +47,9 @@ module.exports = class HttpCat extends Plugin {
             }
         })
     }
+
+    pluginWillUnload() {
+        powercord.api.settings.unregisterSettings('http-cat');
+        powercord.api.commands.unregisterCommand('http-cat');
+    }
 }
