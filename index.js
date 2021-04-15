@@ -24,9 +24,9 @@ module.exports = class HttpCat extends Plugin {
                         result: `Invalid arguments. Run \`${powercord.api.commands.prefix}help http-cat}\` for more info.`
                     };
                 }
-
+                
                 let url = `https://http.cat/${args[0]}${(appendJpg ? ".jpg" : "")}`
-                let res = await get(url)
+                let res = await get(url);
 
                 if (res.statusCode == 404) {
                     return {
