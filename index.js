@@ -31,9 +31,7 @@ module.exports = class HttpCat extends Plugin {
                     let url = `https://http.cat/${args[0]}${(appendJpg ? ".jpg" : "")}`
                     res = await get(url);
                 } catch (err) {
-                    console.log(err.name);
-                    console.log(err.message);
-                    if (err.name == "HTTP Error: 404 Not Found") {
+                    if (err.message === "404 Not Found") {
                         return {
                             send: false,
                             result: "That status code doesn't exist!"
