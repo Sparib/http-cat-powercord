@@ -25,10 +25,11 @@ module.exports = class HttpCat extends Plugin {
                     };
                 }
 
+                let url;
                 let res;
                 
                 try {
-                    let url = `https://http.cat/${args[0]}${(appendJpg ? ".jpg" : "")}`
+                    url = `https://http.cat/${args[0]}${(appendJpg ? ".jpg" : "")}`
                     res = await get(url);
                 } catch (err) {
                     if (err.message === "404 Not Found") {
