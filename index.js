@@ -32,6 +32,7 @@ module.exports = class HttpCat extends Plugin {
                     res = await get(url);
                 } catch (err) {
                     console.log(err.name);
+                    console.log(err.message);
                     if (err.name == "HTTP Error: 404 Not Found") {
                         return {
                             send: false,
