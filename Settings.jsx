@@ -1,7 +1,7 @@
 const { React } = require('powercord/webpack');
 const { SwitchItem } = require('powercord/components/settings');
 
-module.exports = ({ getSetting, updateSetting, toggleSetting }) => {
+module.exports = ({ getSetting, updateSetting, toggleSetting }) => (
     <div>
         <SwitchItem
             note="Whether to append .jpg to the url or not."
@@ -11,4 +11,4 @@ module.exports = ({ getSetting, updateSetting, toggleSetting }) => {
             Append JPG
         </SwitchItem>
     </div>
-}
+);
